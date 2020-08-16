@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task9 {
+public class Task15 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Determine a size of your array:");
@@ -15,13 +15,24 @@ public class Task9 {
         } else {
             System.out.println("Type the content of your array");
             int[] inputArray = new int[size];
-            for(int i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 inputArray[i] = Integer.parseInt(reader.readLine());
             }
-            for(int j = 0; j < size; j++) {
-                System.out.println(inputArray[j] * 2);
+
+            for (int i = inputArray.length - 1; i > 0; i--) {
+                for (int j = 0; j < i; j++) {
+                    if (inputArray[j] > inputArray[j + 1]) {
+                        int tmp = inputArray[j];
+                        inputArray[j] = inputArray[j + 1];
+                        inputArray[j + 1] = tmp;
+                    }
+                }
+            }
+            for(int finalNumber : inputArray) {
+                System.out.println(finalNumber);
             }
         }
+
         reader.close();
     }
 }

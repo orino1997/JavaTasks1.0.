@@ -19,9 +19,9 @@ public class Task6 {
         }
         mean /= numbsArray.length;
         System.out.println(mean);
-        int result = 0;
-        result = (int) mean / 2;
-        System.out.println(result);
+
+        int result = (int) (mean / 2);
+
         if (result > 3) {
             System.out.println("Программа выполнена корректно");
         }

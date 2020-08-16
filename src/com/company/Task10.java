@@ -24,12 +24,10 @@ public class Task10 {
             }
         }
 
-        for (int i = 0; i < matrixY; i++) {
-            for (int j = 0; j < matrixX; j++) {
-                System.out.print(inputArray[i][j] * 3 + " ");
-            }
-            System.out.println("\n");
+        for (int j = 0; j < matrixX; j++) {
+            System.out.print(inputArray[0][j] * 3 + " ");
         }
+
         reader.close();
     }
 }

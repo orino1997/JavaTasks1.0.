@@ -10,7 +10,8 @@ public class Task4 {
         String input = reader.readLine();
         reader.close();
 
-        System.out.println(binaryTooDecimal(stringToNumbs(input)));
+        int outputNumber = binaryTooDecimal(stringToNumbs(input));
+        System.out.println(outputNumber);
     }
 
     public static int[] stringToNumbs(String s) {
