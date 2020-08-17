@@ -16,9 +16,9 @@ public class Task4 {
 
     public static int[] stringToNumbs(String s) {
         int[] numbsArray = new int[s.length()];
-        String[] stringArray = s.split("");
+        char[] stringArray = s.toCharArray();
         for (int i = 0; i < numbsArray.length; i++) {
-            numbsArray[i] = Integer.parseInt(stringArray[i]);
+            numbsArray[i] = Character.getNumericValue(stringArray[i]);
         }
         return numbsArray;
     }
